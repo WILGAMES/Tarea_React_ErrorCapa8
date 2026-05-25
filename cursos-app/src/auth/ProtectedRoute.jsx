@@ -7,9 +7,10 @@ import { AuthContext } from "./AuthContext";
 function ProtectedRoute({ children }) {
 
   const { isAuthenticated } = useContext(AuthContext);
+  const hasToken = !!localStorage.getItem("token");
 
-  if (!isAuthenticated) {
-    return <Navigate to="/" />;
+  if (!isAuthenticated || !hasToken) {
+    return <Navigate to="/" replace />;
   }
 
   return children;
