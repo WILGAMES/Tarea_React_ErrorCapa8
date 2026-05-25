@@ -8,7 +8,8 @@ function AuthProvider({ children }) {
     !!localStorage.getItem("token")
   );
 
-  const login = () => {
+  const login = (token) => {
+    localStorage.setItem("token", token);
     setIsAuthenticated(true);
   };
 

@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import LoginPage from "./pages/LoginPage";
 import CoursesPage from "./pages/CoursesPage";
+import ProtectedRoute from "./auth/ProtectedRoute";
 
 function App() {
 
