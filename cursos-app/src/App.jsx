@@ -1,26 +1,27 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import CssBaseline from "@mui/material/CssBaseline";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import LoginPage from "./pages/LoginPage";
-import CoursesPage from "./pages/CoursesPage";
 import ProtectedRoute from "./auth/ProtectedRoute";
+import CoursesPage from "./pages/CoursesPage";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
-
   return (
-
     <BrowserRouter>
+      <CssBaseline />
 
       <Routes>
-
         <Route path="/" element={<LoginPage />} />
-
-        <Route path="/courses" element={<ProtectedRoute><CoursesPage /></ProtectedRoute>} />
-
+        <Route
+          path="/courses"
+          element={
+            <ProtectedRoute>
+              <CoursesPage />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
-
     </BrowserRouter>
-
-
   );
 }
 
