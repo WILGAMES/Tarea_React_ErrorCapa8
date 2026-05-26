@@ -29,7 +29,7 @@ function CoursesPage() {
       setLoading(true);
       setError("");
 
-      const data = await request("/api/courses", {
+      const data = await request("/courses", {
         method: "GET",
       });
 

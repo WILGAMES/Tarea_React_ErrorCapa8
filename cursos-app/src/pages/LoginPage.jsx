@@ -29,7 +29,7 @@ function LoginPage() {
     setLoading(true);
 
     try {
-      const data = await request("/api/auth/login", {
+      const data = await request("/auth/login", {
         method: "POST",
         body: JSON.stringify({
           email,

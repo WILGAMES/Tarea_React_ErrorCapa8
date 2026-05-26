@@ -30,7 +30,7 @@ function CourseForm({ onCourseCreated }) {
     setSuccess("");
 
     try {
-      const newCourse = await request("/api/courses", {
+      const newCourse = await request("/courses", {
         method: "POST",
         body: JSON.stringify({
           name: name.trim(),
