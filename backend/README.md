@@ -8,12 +8,6 @@ Backend REST en Java para la tarea de login y cursos.
 - `GET http://localhost:8085/api/courses`
 - `POST http://localhost:8085/api/courses`
 
-Tambien se conservan estas rutas simples:
-
-- `POST http://localhost:8085/login`
-- `GET http://localhost:8085/courses`
-- `POST http://localhost:8085/courses`
-
 ## Credenciales demo
 
 - correo: `admin@errorcapa8.com`
